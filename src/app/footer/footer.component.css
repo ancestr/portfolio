@@ -1,0 +1,18 @@
+.footer {
+    background-color: indigo;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+p {
+    color: white;
+}
+
+a {
+    color: white;
+}

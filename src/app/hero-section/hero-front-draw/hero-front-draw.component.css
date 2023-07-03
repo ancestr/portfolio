@@ -1,0 +1,88 @@
+#image140 {
+    border-radius: 10%;
+}
+
+
+path, ellipse, rect {
+    fill:none;
+    stroke-width:3;
+    stroke-linecap:round;
+    stroke-linejoin:bevel;
+    stroke: #b2c6d7;
+}
+
+rect, ellipse {
+    fill: #ffffff;
+}
+rect {
+    stroke-width: 2;
+}
+
+path, ellipse, rect{
+    stroke-opacity: 0.3;
+}
+
+#path3252, #path1495, #path1767, #path6118, #path10407,
+#path10916, #path9528, #path6448, #path11872, #path11394,
+#path15851, #path10918, #path3435, #path11364, #path11840,
+#path11842, #path15801, #path15807, #path15849, #path11884,
+#path11277, #path11194, #path11200, #path15881 {
+    stroke-opacity: 1;
+    stroke-dasharray : 100, 15, 200, 15;
+    stroke-dashoffset: 3000;
+    animation: draw 20s infinite;
+    animation-timing-function: linear;
+}
+
+#path15815, #path15813, #path12679-6, #path12679, #path17432,
+#path15843, #path15998, #path15996, #path16006, #path16941,
+#path15845, #path15839, #path15841, #path15847, #path15809,
+#path17426, #path15827, #path17056, #path16002,
+#path15833, #path15831, #path17428, #path15835, #path17430,
+#path16000, #path15823, #path15821, #path16819, #path16004,
+#path16010, #path15829, #path15817, #path17052, #path17054,
+#path15819, #path18178, #path15799, #path13642, #path10495 {
+    opacity: unset;
+    stroke-opacity: unset !important;
+    stroke-opacity: 1;
+    stroke-dasharray : 100, 15, 200, 15;
+    stroke-dashoffset: 3000;
+    animation: draw 20s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes draw {
+    0% {
+    }
+    100% {
+      stroke-dashoffset: 0;
+      stroke-opacity: 1;
+    }
+}
+
+.neon-text {
+    text-shadow: none;
+    animation-delay: 3s;
+    animation-name: flicker;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    stroke:#ff8686;
+
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 3px #fff,
+      0 0 8px #ff8686,
+      0 0 17px #ff8686,
+      0 0 82px #ff8686,
+      0 0 92px #ff8686,
+      0 0 102px #ff8686,
+      0 0 151px #ff8686;
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
+  }

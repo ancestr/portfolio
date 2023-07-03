@@ -1,0 +1,33 @@
+<div class="container">
+  <div>
+    <img src="../../assets/img-01.jpg" class="rotate-expand" (mousemove)="handleMouseMove($event)" (mouseleave)="resetElement($event)">
+  </div>
+  <form [formGroup]="myForm" (ngSubmit)="sendEmail()">
+    <h1>Get in touch</h1>
+    <div class="input-with-icon" [ngClass]="{'invalid-beat': !myForm.controls.nameForm.valid && myForm.controls.nameForm.touched}" [class.beat]="input1Clicked">
+      <span class="icon" [ngClass]="{'focused': input1Clicked}"><i class="fas fa-user"></i></span>
+      <input formControlName="nameForm" type="text" id="name" placeholder="Name: Obi-Wan Kenobi"
+      (focus)="input1Clicked = true" (blur)="input1Clicked = false">
+    </div>
+    <div class="input-with-icon" [ngClass]="{'invalid-beat': !myForm.controls.emailForm.valid && myForm.controls.emailForm.touched}" [class.beat]="input2Clicked">
+      <span class="icon" [ngClass]="{'focused': input2Clicked}"><i class="fas fa-envelope"></i></span>
+      <input formControlName="emailForm" type="email" id="email" placeholder="Email: thisismyemail@email.com"
+      (focus)="input2Clicked = true" (blur)="input2Clicked = false">
+    </div>
+    <div class="input-with-icon" [class.beat]="input3Clicked">
+      <span class="icon" [ngClass]="{'focused': input3Clicked}"><i class="fas fa-phone"></i></span>
+      <input formControlName="phoneForm" id="phone" placeholder="Phone: +..."
+      (focus)="input3Clicked = true" (blur)="input3Clicked = false">
+    </div>
+    <div class="input-with-icon" [ngClass]="{'invalid-beat': !myForm.controls.messageForm.valid && myForm.controls.messageForm.touched}" [class.beat]="input4Clicked">
+      <span class="icon"><i></i></span>
+      <textarea formControlName="messageForm" id="message" placeholder="Message: We will work together..."
+      (focus)="input4Clicked = true" (blur)="input4Clicked = false"></textarea>
+    </div>
+    <button type="submit"
+    [class.invalid-button]="buttonShake"
+    >
+    Send
+    </button>
+  </form>
+</div>

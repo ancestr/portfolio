@@ -1,0 +1,23 @@
+a {
+    fill: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: fill 1s ease;
+}
+
+a:hover {
+    fill: #c444dd;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    a {
+      text-decoration: underline;
+    }
+    #img-2 {
+      y: 35%;
+    }
+  }

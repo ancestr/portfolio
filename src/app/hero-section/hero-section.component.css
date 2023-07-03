@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+
+.width-one {
+  flex-basis: 65%;
+}
+
+.width-two {
+  flex-basis: 35%;
+  background-color: #484848;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}

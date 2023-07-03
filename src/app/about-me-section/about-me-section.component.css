@@ -1,0 +1,13 @@
+.about-section {
+    background-color: #484848;
+}
+
+p, h1 {
+    color: white;
+    margin: 0;
+    padding: 2rem;
+}
+
+p {
+    font-size: large;
+}
