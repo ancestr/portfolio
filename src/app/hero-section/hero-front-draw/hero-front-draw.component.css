@@ -65,7 +65,7 @@ path, ellipse, rect{
     animation-delay: 3s;
     animation-name: flicker;
     animation-duration: 4s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: initial;
     animation-iteration-count: 2;
     stroke:#ff8686;
 
